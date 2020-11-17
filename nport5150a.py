@@ -122,8 +122,8 @@ class NPort5150A:
 		self.send_cmd("")
 
 
-	def __init__(self, ip, port=23):
-		self.tn = Telnet(ip, port)
+	def __init__(self, ip, port=23, timeout=3600):
+		self.tn = Telnet(ip, port, timeout=timeout)
 		time.sleep(1)
 	
 
